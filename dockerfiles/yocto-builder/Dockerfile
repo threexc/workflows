@@ -4,8 +4,8 @@ FROM debian:13
 RUN apt-get update && apt-get install -y \
     build-essential chrpath cpio debianutils diffstat file gawk gcc git \
     iputils-ping libacl1 locales lz4 python3 python3-git python3-jinja2 \
-    python3-pexpect python3-pip python3-subunit socat texinfo unzip wget \
-    xz-utils zstd
+    python3-pexpect python3-pip python3-subunit python3-venv socat texinfo \
+    unzip wget xz-utils zstd
 
 # Set locale (important for some Yocto operations)
 #RUN locale-gen en_US.UTF-8
