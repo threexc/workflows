@@ -14,8 +14,8 @@ RUN echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen && locale-gen
 # Create a non-root user (optional, but recommended)
 ARG USER_UID=1500
 ARG USER_GID=1500
-RUN groupadd -g $USER_GID lg-operator && useradd -m -u $USER_UID -g $USER_GID -s /bin/bash lg-operator
+RUN groupadd -g $USER_GID labgrid && useradd -m -u $USER_UID -g $USER_GID -s /bin/bash labgrid
 
-USER lg-operator
+USER labgrid
 
-WORKDIR /home/lg-operator
+WORKDIR /home/labgrid
