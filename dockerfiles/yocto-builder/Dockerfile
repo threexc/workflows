@@ -5,7 +5,7 @@ ARG USER_UID=1500
 ARG USER_GID=1500
 
 # Install Yocto dependencies
-RUN apt-get update && \\
+RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
     build-essential \
     chrpath \
