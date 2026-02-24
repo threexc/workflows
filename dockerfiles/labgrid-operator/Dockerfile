@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python3-venv \
     python3-dev \
     qemu-system-x86 \
+    qemu-system-riscv \
     qemu-utils \
     socat \
     unzip \
