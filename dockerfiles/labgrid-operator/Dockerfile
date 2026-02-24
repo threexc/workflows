@@ -1,11 +1,27 @@
 FROM debian:13
 
-# Install Yocto dependencies
-RUN apt-get update && apt-get install -y \
-    build-essential chrpath cpio debianutils diffstat file gawk gcc git \
-    iputils-ping libacl1 locales lz4 python3 python3-git python3-jinja2 \
-    python3-pexpect python3-pip python3-subunit python3-venv rsync socat \
-    texinfo tftp-hpa unzip wget xz-utils zstd
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    curl \
+    git \
+    iproute2 \
+    locales \
+    netcat-openbsd \
+    openssh-client \
+    ovmf \
+    pkg-config \
+    python3 \
+    python3-pip \
+    python3-venv \
+    python3-dev \
+    qemu-system-x86 \
+    qemu-utils \
+    socat \
+    unzip \
+    xz-utils \
+    && rm -rf /var/lib/apt/lists/*
 
 # Set locale (important for some Yocto operations)
 #RUN locale-gen en_US.UTF-8
