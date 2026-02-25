@@ -21,6 +21,7 @@ RUN apt-get update && \
     libacl1 \
     locales \
     lz4 \
+    nodejs \
     pcre2-utils \
     pylint \
     python3 \
