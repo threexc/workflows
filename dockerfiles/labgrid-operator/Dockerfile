@@ -20,6 +20,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     qemu-system-x86 \
     qemu-system-riscv \
     qemu-utils \
+    rsync \
     socat \
     unzip \
     xz-utils \
